@@ -1,2 +1,2 @@
 # Selectpicker
-A javascript selectpicker. No jquery.
+A javascript selectpicker without jquery.
