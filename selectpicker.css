@@ -1,0 +1,103 @@
+.selectpicker {
+    width: 100%;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    position: relative;
+    font-family: inherit;
+    overflow: visible;
+    appearance: none;
+        -moz-appearance:none;
+        -webkit-appearance:none;
+}
+
+.selectpicker[data-style="btn-primary"] {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+.selectpicker[data-style="btn-info"] {
+    color: #fff;
+    background-color: #31b0d5;
+    border-color: #269abc;
+}
+
+.selectpicker[data-style="btn-success"] {
+    color: #fff;
+    background-color: #449d44;
+    border-color: #398439;
+}
+
+.selectpicker[data-style="btn-warning"] {
+    color: #fff;
+    background-color: #ec971f;
+    border-color: #d58512;
+}
+
+.selectpicker[data-style="btn-danger"] {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+
+.caret {
+    float: right;
+    width: 0;
+    height: 0;
+    border-top: 4px dashed;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+
+.selectpicker.focus, .selectpicker:focus, .selectpicker:hover, .selectpicker:active {
+    color: #333;
+    text-decoration: none;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
+
+.selectpicker:active:focus, .selectpicker:active:hover {
+    color: #333;
+    text-decoration: none;
+    background-color: #d4d4d4;
+    border-color: #8c8c8c;
+}
+
+.selectpicker > option {
+    color: #262626;
+    text-decoration: none;
+    background-color: #f5f5f5;
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    white-space: nowrap;
+
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 4px;
+}
