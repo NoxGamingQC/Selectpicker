@@ -21,7 +21,7 @@ var selectpicker = {
             pickerParentElement.replaceChild(divElement, picker);
             divElement.classList.add('selectpicker-group');
             selectPickerTitle = picker.getAttribute('title');
-            divElement.innerHTML = '<button class="selectpicker-button" role="button">' + selectPickerTitle +' <span class="caret"><span></button>';
+            divElement.innerHTML = '<button class="selectpicker-button" role="button"><span class="caret""><span></button>';
             divElement.appendChild(picker);
         });
     }
