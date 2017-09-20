@@ -1,4 +1,4 @@
-.selectpicker {
+.selectpicker-button {
     width: 100%;
     display: inline-block;
     padding: 6px 12px;
@@ -28,36 +28,6 @@
         -webkit-appearance:none;
 }
 
-.selectpicker[data-style="btn-primary"] {
-    color: #fff;
-    background-color: #337ab7;
-    border-color: #2e6da4;
-}
-
-.selectpicker[data-style="btn-info"] {
-    color: #fff;
-    background-color: #31b0d5;
-    border-color: #269abc;
-}
-
-.selectpicker[data-style="btn-success"] {
-    color: #fff;
-    background-color: #449d44;
-    border-color: #398439;
-}
-
-.selectpicker[data-style="btn-warning"] {
-    color: #fff;
-    background-color: #ec971f;
-    border-color: #d58512;
-}
-
-.selectpicker[data-style="btn-danger"] {
-    color: #fff;
-    background-color: #d9534f;
-    border-color: #d43f3a;
-}
-
 .caret {
     float: right;
     width: 0;
@@ -67,21 +37,21 @@
     border-left: 4px solid transparent;
 }
 
-.selectpicker.focus, .selectpicker:focus, .selectpicker:hover, .selectpicker:active {
+.selectpicker-button.focus, .selectpicker-button:focus, .selectpicker-button:hover, .selectpicker-button:active {
     color: #333;
     text-decoration: none;
     background-color: #e6e6e6;
     border-color: #adadad;
 }
 
-.selectpicker:active:focus, .selectpicker:active:hover {
+.selectpicker-button:active:focus, .selectpicker-button:active:hover {
     color: #333;
     text-decoration: none;
     background-color: #d4d4d4;
     border-color: #8c8c8c;
 }
 
-.selectpicker > option {
+.selectpicker-button > option {
     color: #262626;
     text-decoration: none;
     background-color: #f5f5f5;
@@ -100,4 +70,8 @@
     box-sizing: border-box;
     cursor: pointer;
     border-radius: 4px;
+}
+
+.selectpicker {
+    visibility: hidden;
 }
