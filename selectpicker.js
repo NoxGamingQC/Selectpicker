@@ -24,6 +24,14 @@ var selectpicker = {
             divElement.innerHTML = '<button class="selectpicker-button" role="button"> <span class="selectpicker-value"></span> <span class="caret"><span></button>';
             divElement.querySelector('button.selectpicker-button > span.selectpicker-value').innerHTML = picker.getAttribute('placeholder');
             divElement.querySelector('button.selectpicker-button > span.selectpicker-value').classList.add('placeholder');
+            divElement.innerHTML += '<div class="dropdown-menu-select"><ul class="select-option-list"></ul></div>';
+            divElement.querySelector('button.selectpicker-button').addEventListener('click', function() {
+                divElement.classList.toggle('open');
+            });
+
+            picker.querySelectorAll('option').forEach(function(option) {
+                divElement.querySelector('div.dropdown-menu-select > ul.select-option-list').innerHTML += '<li value="' + option.value + '">' + option.innerHTML + '</li>'
+            });
             divElement.appendChild(picker);
         });
     }
