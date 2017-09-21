@@ -59,14 +59,14 @@ div.selectpicker-group:not(.open) > div.dropdown-menu-select {
     border-left: 4px solid transparent;
 }
 
-.selectpicker-button.focus, .selectpicker-button:focus, .selectpicker-button:hover, .selectpicker-button:active {
+.selectpicker-button:hover {
     color: #333;
     text-decoration: none;
     background-color: #e6e6e6;
     border-color: #adadad;
 }
 
-.selectpicker-button:active:focus, .selectpicker-button:active:hover {
+.selectpicker-group.open > button.selectpicker-button {
     color: #333;
     text-decoration: none;
     background-color: #d4d4d4;
