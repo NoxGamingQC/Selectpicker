@@ -1,21 +1,11 @@
 .selectpicker-button {
     width: 100%;
-    display: inline-block;
     padding: 6px 12px;
-    margin-bottom: 0;
+    margin: 0;
     font-size: 14px;
     font-weight: 400;
-    line-height: 1.42857143;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
+    line-height: 1.5;
     cursor: pointer;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-    user-select: none;
     background-image: none;
     color: #333;
     border: 1px solid #ccc;
@@ -23,13 +13,22 @@
     position: relative;
     font-family: inherit;
     overflow: visible;
-    appearance: none;
-        -moz-appearance:none;
-        -webkit-appearance:none;
+}
+
+.selectpicker-button {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.select-title {
+    margin:auto;
+    margin-left: 0px;
 }
 
 .caret {
-    float: right;
+    margin: 8px;
     width: 0;
     height: 0;
     border-top: 4px dashed;
