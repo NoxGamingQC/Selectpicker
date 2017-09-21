@@ -21,7 +21,9 @@ var selectpicker = {
             pickerParentElement.replaceChild(divElement, picker);
             divElement.classList.add('selectpicker-group');
             selectPickerTitle = picker.getAttribute('title');
-            divElement.innerHTML = '<button class="selectpicker-button" role="button"> <span class="select-title">asdf</span> <span class="caret"><span></button>';
+            divElement.innerHTML = '<button class="selectpicker-button" role="button"> <span class="select-value"></span> <span class="caret"><span></button>';
+            divElement.querySelector('button.selectpicker-button > span.select-value').innerHTML = picker.getAttribute('placeholder');
+            divElement.querySelector('button.selectpicker-button > span.select-value').classList.add('placeholder');
             divElement.appendChild(picker);
         });
     }
