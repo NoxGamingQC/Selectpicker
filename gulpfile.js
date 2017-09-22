@@ -3,13 +3,12 @@ var gulp = require('gulp'),
     sass = require("gulp-sass"),
     concat = require("gulp-concat");
 
-
 gulp.task('default', function () {
-    gulp.src('./dev/*.js')
+    gulp.src('./dev/js/*.js')
         .pipe(uglify())
         .pipe(concat('selectpicker.js'))
         .pipe(gulp.dest('./dist'));
-    gulp.src('./dev/*.sass')
+    gulp.src('./dev/sass/*.sass')
         .pipe(sass())
         .pipe(concat('selectpicker.sass'))
         .pipe(gulp.dest('./dist'));
