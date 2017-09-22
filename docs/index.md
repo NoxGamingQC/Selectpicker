@@ -1,7 +1,3 @@
-## Selectpicker
-
-A simple javascript selectpicker
-
 ## Exemple
 
 Coming soon.
