@@ -2,10 +2,10 @@
 
 A simple javascript selectpicker
 
-#### Exemple
+## Exemple
 
 Coming soon.
 
-#### Method
+## Method
 
 Comming soon.
