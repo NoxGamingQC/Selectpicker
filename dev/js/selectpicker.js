@@ -13,6 +13,16 @@ var selectpicker = {
         return document.querySelectorAll('.selectpicker').length > 0;
     },
 
+    hasValueSelected: function(select) {
+        var hasSelected = false;
+        select.querySelectorAll('option').forEach(function(value) {
+            if (value.getAttribute('selected') !== null) {
+                hasSelected = true;
+            }
+        });
+        return hasSelected;
+    },
+
     initSelectPicker: function() {
         document.querySelectorAll('.selectpicker').forEach(function(picker) {
             var pickerParentElement = picker.parentNode;
@@ -22,11 +32,15 @@ var selectpicker = {
             divElement.classList.add('selectpicker-group');
             selectPickerTitle = picker.getAttribute('title');
             divElement.innerHTML = '<button id="selectpickerButton" class="" role="button"> <span class="selectpicker-value"></span> <span class="caret"><span></button>';
-            divElement.querySelector('button#selectpickerButton').setAttribute('class', picker.getAttribute('class'));
+            divElement.querySelector('button#selectpickerButton').setAttribute('data-type', picker.getAttribute('data-type'));
             divElement.querySelector('button#selectpickerButton').classList.add('selectpicker-button');
-            divElement.querySelector('button.selectpicker-button').classList.remove('selectpicker');
-            divElement.querySelector('button.selectpicker-button > span.selectpicker-value').innerHTML = picker.getAttribute('placeholder');
-            divElement.querySelector('button.selectpicker-button > span.selectpicker-value').classList.add('placeholder');
+
+            if(selectpicker.hasValueSelected(picker)) {
+                divElement.querySelector('button.selectpicker-button > span.selectpicker-value').innerHTML = picker.getAttribute('title');
+            } else {
+                divElement.querySelector('button.selectpicker-button > span.selectpicker-value').innerHTML = picker.getAttribute('placeholder');
+                divElement.querySelector('button.selectpicker-button > span.selectpicker-value').classList.add('placeholder');
+            }
             divElement.innerHTML += '<div class="dropdown-menu-select"><ul class="select-option-list"></ul></div>';
             divElement.querySelector('button.selectpicker-button').addEventListener('click', function() {
                 divElement.classList.toggle('open');

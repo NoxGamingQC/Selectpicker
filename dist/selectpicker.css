@@ -2,30 +2,30 @@
   visibility: hidden;
   z-index: -98; }
 
-/*.placeholder {
-    color: $selectpicker-placeholder-color;
-}*/
-.selectpicker-button.primary {
+.placeholder {
+  color: #888; }
+
+.selectpicker-button[data-type="primary"] {
   background-color: #337ab7;
   border-color: #2e6da4;
   color: #FFF; }
 
-.selectpicker-button.info {
+.selectpicker-button[data-type="info"] {
   background-color: #31b0d5;
   border-color: #269abc;
   color: #FFF; }
 
-.selectpicker-button.success {
+.selectpicker-button[data-type="success"] {
   background-color: #449d44;
   border-color: #269abc;
   color: #FFF; }
 
-.selectpicker-button.warning {
+.selectpicker-button[data-type="warning"] {
   background-color: #ec971f;
   border-color: #d58512;
   color: #FFF; }
 
-.selectpicker-button.danger {
+.selectpicker-button[data-type="danger"] {
   background-color: #c9302c;
   border-color: #ac2925;
   color: #FFF; }

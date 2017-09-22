@@ -3,35 +3,35 @@
     z-index: -98;
 }
 
-/*.placeholder {
+.placeholder {
     color: $selectpicker-placeholder-color;
-}*/
+}
 
-.selectpicker-button.primary {
+.selectpicker-button[data-type="primary"] {
     background-color: $selectpicker-primary-unselected;
     border-color: $selectpicker-primary-border-unselected;
     color: #FFF;
 }
 
-.selectpicker-button.info {
+.selectpicker-button[data-type="info"] {
     background-color: $selectpicker-info-unselected;
     border-color: #269abc;
     color: #FFF;
 }
 
-.selectpicker-button.success {
+.selectpicker-button[data-type="success"] {
     background-color: $selectpicker-success-unselected;
     border-color: $selectpicker-info-border-unselected;
     color: #FFF;
 }
 
-.selectpicker-button.warning {
+.selectpicker-button[data-type="warning"] {
     background-color: $selectpicker-warning-unselected;
     border-color: $selectpicker-warning-border-unselected;
     color: #FFF;
 }
 
-.selectpicker-button.danger {
+.selectpicker-button[data-type="danger"] {
     background-color: $selectpicker-danger-unselected;
     border-color: $selectpicker-danger-border-unselected;
     color: #FFF;
