@@ -1,0 +1,31 @@
+{
+  "name": "selectpicker",
+  "version": "1.0.0",
+  "description": "A simple javascript selectpicker.",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-uglify": "^3.0.0"
+  },
+  "devDependencies": {
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^3.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NoxRacing/Selectpicker.git"
+  },
+  "keywords": [
+    "selectpicker",
+    "javascript"
+  ],
+  "author": "Jimmy Béland-Bédard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NoxRacing/Selectpicker/issues"
+  },
+  "homepage": "https://github.com/NoxRacing/Selectpicker#readme"
+}
