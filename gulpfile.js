@@ -8,8 +8,8 @@ gulp.task('default', function () {
         .pipe(uglify())
         .pipe(concat('selectpicker.js'))
         .pipe(gulp.dest('./dist'));
-    gulp.src('./dev/sass/*.sass')
+    gulp.src('./dev/sass/*.scss')
         .pipe(sass())
-        .pipe(concat('selectpicker.sass'))
+        .pipe(concat('selectpicker.css'))
         .pipe(gulp.dest('./dist'));
 });

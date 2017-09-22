@@ -1,0 +1,53 @@
+.selectpicker-button {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: 6px 12px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid $selectpicker-default-border-unselected;
+    border-radius: 4px;
+    position: relative;
+    font-family: inherit;
+    overflow: hidden;
+    height: 34px;
+}
+
+.selectpicker-button:hover {
+    text-decoration: none;
+    background-color: $selectpicker-default-selected;
+    border-color: $selectpicker-default-border-selected;
+}
+
+.selectpicker-group.open > button.selectpicker-button {
+    text-decoration: none;
+    background-color: $selectpicker-default-selected;
+    border-color: $selectpicker-default-border-selected;
+}
+
+.selectpicker-button > option {
+    color: $selectpicker-text-color;
+    text-decoration: none;
+    background-color: $selectpicker-default-option-background;
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    white-space: nowrap;
+
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 4px;
+}
