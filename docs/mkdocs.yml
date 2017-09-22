@@ -3,7 +3,6 @@ site_description: A simple javascript selectpicker.
 repo_url: https://github.com/NoxRacing/Selectpicker
 theme: jekyll-theme-cayman
 extra_css:
-- css/custom.css
 - dist/css/selectpicker.css
 extra_javascript:
 - dist/js/selectpicker.js
