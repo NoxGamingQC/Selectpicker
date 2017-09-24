@@ -1,1 +1,55 @@
-document.addEventListener("DOMContentLoaded",function(){selectpicker.init()});var selectpicker={init:function(){selectpicker.checkIfDomHasSelectpicker()&&selectpicker.initSelectPicker()},checkIfDomHasSelectpicker:function(){return document.querySelectorAll(".selectpicker").length>0},hasValueSelected:function(e){var t=!1;return e.querySelectorAll("option").forEach(function(e){null!==e.getAttribute("selected")&&(t=!0)}),t},initSelectPicker:function(){document.querySelectorAll(".selectpicker").forEach(function(e){var t=e.parentNode,c=document.createElement("div");t.replaceChild(c,e),c.classList.add("selectpicker-group"),selectPickerTitle=e.getAttribute("title"),c.innerHTML='<button id="selectpickerButton" class="" role="button"> <span class="selectpicker-value"></span> <span class="caret"><span></button>',c.querySelector("button#selectpickerButton").setAttribute("data-type",e.getAttribute("data-type")),c.querySelector("button#selectpickerButton").classList.add("selectpicker-button"),selectpicker.hasValueSelected(e)?c.querySelector("button.selectpicker-button > span.selectpicker-value").innerHTML=e.getAttribute("title"):(c.querySelector("button.selectpicker-button > span.selectpicker-value").innerHTML=e.getAttribute("placeholder"),c.querySelector("button.selectpicker-button > span.selectpicker-value").classList.add("placeholder")),c.innerHTML+='<div class="dropdown-menu-select"><ul class="select-option-list"></ul></div>',c.querySelector("button.selectpicker-button").addEventListener("click",function(){c.classList.toggle("open")}),e.querySelectorAll("option").forEach(function(e){c.querySelector("div.dropdown-menu-select > ul.select-option-list").innerHTML+='<li value="'+e.value+'">'+e.innerHTML+"</li>"}),c.appendChild(e)})}};
+document.addEventListener("DOMContentLoaded", function () {
+    selectpicker.init();
+});
+
+var selectpicker = {
+    init: function() {
+        if (selectpicker.checkIfDomHasSelectpicker()) {
+            selectpicker.initSelectPicker();
+        }
+    },
+
+    checkIfDomHasSelectpicker: function() {
+        return document.querySelectorAll('.selectpicker').length > 0;
+    },
+
+    hasValueSelected: function(select) {
+        var hasSelected = false;
+        select.querySelectorAll('option').forEach(function(value) {
+            if (value.getAttribute('selected') !== null) {
+                hasSelected = true;
+            }
+        });
+        return hasSelected;
+    },
+
+    initSelectPicker: function() {
+        document.querySelectorAll('.selectpicker').forEach(function(picker) {
+            var pickerParentElement = picker.parentNode;
+            var divElement = document.createElement('div');
+
+            pickerParentElement.replaceChild(divElement, picker);
+            divElement.classList.add('selectpicker-group');
+            selectPickerTitle = picker.getAttribute('title');
+            divElement.innerHTML = '<button id="selectpickerButton" class="" role="button"> <span class="selectpicker-value"></span> <span class="caret"><span></button>';
+            divElement.querySelector('button#selectpickerButton').setAttribute('data-type', picker.getAttribute('data-type'));
+            divElement.querySelector('button#selectpickerButton').classList.add('selectpicker-button');
+
+            if(selectpicker.hasValueSelected(picker)) {
+                divElement.querySelector('button.selectpicker-button > span.selectpicker-value').innerHTML = picker.getAttribute('title');
+            } else {
+                divElement.querySelector('button.selectpicker-button > span.selectpicker-value').innerHTML = picker.getAttribute('placeholder');
+                divElement.querySelector('button.selectpicker-button > span.selectpicker-value').classList.add('placeholder');
+            }
+            divElement.innerHTML += '<div class="dropdown-menu-select"><ul class="select-option-list"></ul></div>';
+            divElement.querySelector('button.selectpicker-button').addEventListener('click', function() {
+                divElement.classList.toggle('open');
+            });
+
+            picker.querySelectorAll('option').forEach(function(option) {
+                divElement.querySelector('div.dropdown-menu-select > ul.select-option-list').innerHTML += '<li value="' + option.value + '">' + option.innerHTML + '</li>'
+            });
+            divElement.appendChild(picker);
+        });
+    }
+}

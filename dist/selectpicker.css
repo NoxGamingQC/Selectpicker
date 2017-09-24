@@ -1,34 +1,41 @@
 .selectpicker {
   visibility: hidden;
-  z-index: -98; }
+  z-index: -98;
+}
 
 .placeholder {
-  color: #888; }
+  color: #888;
+}
 
 .selectpicker-button[data-type="primary"] {
   background-color: #337ab7;
   border-color: #2e6da4;
-  color: #FFF; }
+  color: #FFF;
+}
 
 .selectpicker-button[data-type="info"] {
   background-color: #31b0d5;
   border-color: #269abc;
-  color: #FFF; }
+  color: #FFF;
+}
 
 .selectpicker-button[data-type="success"] {
   background-color: #449d44;
   border-color: #269abc;
-  color: #FFF; }
+  color: #FFF;
+}
 
 .selectpicker-button[data-type="warning"] {
   background-color: #ec971f;
   border-color: #d58512;
-  color: #FFF; }
+  color: #FFF;
+}
 
 .selectpicker-button[data-type="danger"] {
   background-color: #c9302c;
   border-color: #ac2925;
-  color: #FFF; }
+  color: #FFF;
+}
 
 .selectpicker-button {
   display: inline-flex;
@@ -48,17 +55,20 @@
   position: relative;
   font-family: inherit;
   overflow: hidden;
-  height: 34px; }
+  height: 34px;
+}
 
 .selectpicker-button:hover {
   text-decoration: none;
   background-color: #d4d4d4;
-  border-color: #8c8c8c; }
+  border-color: #8c8c8c;
+}
 
 .selectpicker-group.open > button.selectpicker-button {
   text-decoration: none;
   background-color: #d4d4d4;
-  border-color: #8c8c8c; }
+  border-color: #8c8c8c;
+}
 
 .selectpicker-button > option {
   color: #333;
@@ -77,7 +87,8 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   cursor: pointer;
-  border-radius: 4px; }
+  border-radius: 4px;
+}
 
 .caret {
   margin: 8px;
@@ -86,28 +97,34 @@
   height: 0;
   border-top: 4px dashed;
   border-right: 4px solid transparent;
-  border-left: 4px solid transparent; }
+  border-left: 4px solid transparent;
+}
 
 .dropdown-menu-select {
   border: 1px solid #ccc;
   border-radius: 4px;
   width: 100%;
   overflow: hidden;
-  min-height: 0px; }
+  min-height: 0px;
+}
 
 div.selectpicker-group.open > div.dropdown-menu-select {
-  visibility: visible; }
+  visibility: visible;
+}
 
 div.selectpicker-group:not(.open) > div.dropdown-menu-select {
-  visibility: hidden; }
+  visibility: hidden;
+}
 
 .select-option-list {
   max-height: 125.4px;
   overflow-y: auto;
-  min-height: 0px; }
+  min-height: 0px;
+}
 
 .selectpicker-value {
   display: inline-block;
   margin: auto;
   margin-left: 0px;
-  overflow: hidden; }
+  overflow: hidden;
+}
