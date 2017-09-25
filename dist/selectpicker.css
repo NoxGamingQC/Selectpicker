@@ -120,6 +120,8 @@ div.selectpicker-group:not(.open) > div.dropdown-menu-select {
   max-height: 125.4px;
   overflow-y: auto;
   min-height: 0px;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .selectpicker-value {
@@ -127,4 +129,16 @@ div.selectpicker-group:not(.open) > div.dropdown-menu-select {
   margin: auto;
   margin-left: 0px;
   overflow: hidden;
+}
+
+.select-option-list > li {
+  list-style: none;
+  padding-left: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.select-option-list > li:hover {
+  background: #337ab7;
+  color: #FFF;
 }
