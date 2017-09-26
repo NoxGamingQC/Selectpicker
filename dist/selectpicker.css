@@ -142,3 +142,8 @@ div.selectpicker-group:not(.open) > div.dropdown-menu-select {
   background: #337ab7;
   color: #FFF;
 }
+
+.select-option-list > li[selected] {
+  background: #337ab7;
+  color: #FFF;
+}

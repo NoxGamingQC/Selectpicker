@@ -77,16 +77,16 @@ var selectpicker = {
         document.querySelectorAll('div.selectpicker-group > div.dropdown-menu-select > ul.select-option-list > li').forEach(function(option) {
             option.addEventListener('click', function() {
                 option.setAttribute('selected', '');
-                selectedValue = '' + option.value;
+                selectedValue = option.getAttribute('value');
                 option.parentElement.parentElement.parentElement.querySelectorAll('select.selectpicker > option').forEach(function(selectOption) {
-                    if(selectOption.value == option.value) {
+                    if (selectOption.getAttribute('value') == selectedValue) {
                         selectOption.setAttribute('selected', '');
                     } else {
                         selectOption.removeAttribute('selected');
                     }
                 });
                 document.querySelectorAll('div.selectpicker-group > div.dropdown-menu-select > ul.select-option-list > li').forEach(function (option) {
-                    if ('' + option.value !== selectedValue) {
+                    if (option.getAttribute('value') !== selectedValue) {
                         option.removeAttribute('selected');
                     }
                 });

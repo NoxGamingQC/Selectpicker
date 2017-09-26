@@ -41,3 +41,8 @@ div.selectpicker-group:not(.open) > div.dropdown-menu-select {
     background: $selectpicker-primary-unselected;
     color: $selectpicker-primary-text-color;
 }
+
+.select-option-list > li[selected] {
+    background: $selectpicker-primary-unselected;
+    color: $selectpicker-primary-text-color;
+}
