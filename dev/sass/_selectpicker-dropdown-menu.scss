@@ -31,6 +31,7 @@ div.selectpicker-group:not(.open) > div.dropdown-menu-select {
 }
 
 .select-option-list > li {
+    background: $selectpicker-option-background;
     list-style:none;
     padding-left: 25px;
     padding-top: 5px;
@@ -38,8 +39,8 @@ div.selectpicker-group:not(.open) > div.dropdown-menu-select {
 }
 
 .select-option-list > li:hover {
-    background: $selectpicker-primary-unselected;
-    color: $selectpicker-primary-text-color;
+    background: $selectpicker-hover-option-background;
+    color: $selectpicker-text-color-option;
 }
 
 .select-option-list > li[selected] {

@@ -73,7 +73,7 @@
 .selectpicker-button > option {
   color: #333;
   text-decoration: none;
-  background-color: #f5f5f5;
+  background-color: #FFF;
   display: block;
   padding: 3px 20px;
   clear: both;
@@ -132,6 +132,7 @@ div.selectpicker-group:not(.open) > div.dropdown-menu-select {
 }
 
 .select-option-list > li {
+  background: #FFF;
   list-style: none;
   padding-left: 25px;
   padding-top: 5px;
@@ -139,8 +140,8 @@ div.selectpicker-group:not(.open) > div.dropdown-menu-select {
 }
 
 .select-option-list > li:hover {
-  background: #337ab7;
-  color: #FFF;
+  background: #f5f5f5;
+  color: #000;
 }
 
 .select-option-list > li[selected] {

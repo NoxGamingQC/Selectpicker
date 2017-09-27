@@ -38,7 +38,7 @@ var selectpicker = {
             });
 
             divElement.appendChild(picker);
-            selectpicker.setSelectOptionEvent();
+            selectpicker.setSelectOptionEvent(divElement);
         });
     },
 
@@ -72,7 +72,7 @@ var selectpicker = {
         }
     },
 
-    setSelectOptionEvent: function() {
+    setSelectOptionEvent: function(divElement) {
         var selectedValue = '';
         document.querySelectorAll('div.selectpicker-group > div.dropdown-menu-select > ul.select-option-list > li').forEach(function(option) {
             option.addEventListener('click', function() {
@@ -90,7 +90,8 @@ var selectpicker = {
                         option.removeAttribute('selected');
                     }
                 });
-            })
+                divElement.classList.remove('open');
+            });
         });
     }
 }
