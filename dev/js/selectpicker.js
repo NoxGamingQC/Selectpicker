@@ -48,6 +48,12 @@ var selectpicker = {
     displayedValue: function (picker, divElement) {
         if (selectpicker.hasValueSelected(picker)) {
             divElement.querySelector('button.selectpicker-button > span.selectpicker-value').innerHTML = selectpicker.getSelectpickerValue(picker);
+            if (divElement.querySelector('button.selectpicker-button > span.selectpicker-value.placeholder')) {
+                divElement.querySelector('button.selectpicker-button > span.selectpicker-value').classList.remove('placeholder')
+            }
+            if (divElement.querySelector('button.selectpicker-button > span.selectpicker-value.title')) {
+                divElement.querySelector('button.selectpicker-button > span.selectpicker-value').classList.remove('title')
+            }
         } else {
             if(picker.getAttribute('placeholder')) {
                 divElement.querySelector('button.selectpicker-button > span.selectpicker-value').innerHTML = picker.getAttribute('placeholder');

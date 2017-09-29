@@ -1,4 +1,5 @@
 .selectpicker {
+  display: none;
   visibility: hidden;
   z-index: -98;
 }
@@ -52,7 +53,6 @@
   background-image: none;
   border: 1px solid #ccc;
   border-radius: 4px;
-  position: relative;
   font-family: inherit;
   overflow: hidden;
   height: 34px;
@@ -74,7 +74,6 @@
   color: #333;
   text-decoration: none;
   background-color: #FFF;
-  display: block;
   padding: 3px 20px;
   clear: both;
   font-weight: 400;
@@ -108,12 +107,13 @@
   min-height: 0px;
 }
 
-div.selectpicker-group.open > div.dropdown-menu-select {
-  visibility: visible;
+div.selectpicker-group.open > *:not(button) {
+  position: absolute;
+  display: block;
 }
 
 div.selectpicker-group:not(.open) > div.dropdown-menu-select {
-  visibility: hidden;
+  display: none;
 }
 
 .select-option-list {
@@ -125,7 +125,6 @@ div.selectpicker-group:not(.open) > div.dropdown-menu-select {
 }
 
 .selectpicker-value {
-  display: inline-block;
   margin: auto;
   margin-left: 0px;
   overflow: hidden;

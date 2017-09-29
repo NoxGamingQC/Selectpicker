@@ -13,7 +13,6 @@
     background-image: none;
     border: 1px solid $selectpicker-default-border-unselected;
     border-radius: 4px;
-    position: relative;
     font-family: inherit;
     overflow: hidden;
     height: 34px;
@@ -35,13 +34,11 @@
     color: $selectpicker-text-color;
     text-decoration: none;
     background-color: $selectpicker-option-background;
-    display: block;
     padding: 3px 20px;
     clear: both;
     font-weight: 400;
     line-height: 1.42857143;
     white-space: nowrap;
-
     font-size: 14px;
     text-align: left;
     list-style: none;

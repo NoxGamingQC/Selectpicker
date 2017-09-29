@@ -6,14 +6,14 @@
     min-height: 0px;
 }
 
-div.selectpicker-group.open > div.dropdown-menu-select {
-    visibility: visible;
+div.selectpicker-group.open > *:not(button) {
+    position: absolute;
+    display: block;
 }
 
 div.selectpicker-group:not(.open) > div.dropdown-menu-select {
-    visibility: hidden;
+    display: none;
 }
-
 
 .select-option-list {
     max-height: 125.4px;
@@ -24,7 +24,6 @@ div.selectpicker-group:not(.open) > div.dropdown-menu-select {
 }
 
 .selectpicker-value {
-    display: inline-block;
     margin:auto;
     margin-left: 0px;
     overflow: hidden;
