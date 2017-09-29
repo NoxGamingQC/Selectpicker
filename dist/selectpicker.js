@@ -23,22 +23,19 @@ var selectpicker = {
         return hasSelected;
     },
 
+    getSelectpickerValue: function(select) {
+        var optionsSelected = '';
+        select.querySelectorAll('option').forEach(function (value) {
+            if (value.getAttribute('selected') !== null) {
+                optionSelected = value.innerHTML;
+            }
+        });
+        return optionSelected;
+    },
+
     initSelectPicker: function() {
         document.querySelectorAll('.selectpicker').forEach(function(picker) {
-            var divElement = document.createElement('div');
-
-            selectpicker.createSelectpickerButton(picker, divElement);
-            selectpicker.displayedValue(picker, divElement);
-
-            divElement.innerHTML += '<div class="dropdown-menu-select"><ul class="select-option-list"></ul></div>';
-            selectpicker.selectpickerEvent(divElement);
-
-            picker.querySelectorAll('option').forEach(function(option) {
-                divElement.querySelector('div.dropdown-menu-select > ul.select-option-list').innerHTML += '<li value="' + option.value + '">' + option.innerHTML + '</li>'
-            });
-
-            divElement.appendChild(picker);
-            selectpicker.setSelectOptionEvent(divElement);
+            buildSelectPicker.createSelectPicker(picker);
         });
     },
 
@@ -60,7 +57,7 @@ var selectpicker = {
 
     displayedValue: function (picker, divElement) {
         if (selectpicker.hasValueSelected(picker)) {
-
+            divElement.querySelector('button.selectpicker-button > span.selectpicker-value').innerHTML = selectpicker.getSelectpickerValue(picker);
         } else {
             if(picker.getAttribute('placeholder')) {
                 divElement.querySelector('button.selectpicker-button > span.selectpicker-value').innerHTML = picker.getAttribute('placeholder');
@@ -73,6 +70,7 @@ var selectpicker = {
     },
 
     setSelectOptionEvent: function(divElement) {
+        picker = divElement.querySelector('select.selectpicker');
         var selectedValue = '';
         document.querySelectorAll('div.selectpicker-group > div.dropdown-menu-select > ul.select-option-list > li').forEach(function(option) {
             option.addEventListener('click', function() {
@@ -91,7 +89,28 @@ var selectpicker = {
                     }
                 });
                 divElement.classList.remove('open');
+                selectpicker.displayedValue(picker, divElement);
             });
+        });
+    }
+}
+
+var buildSelectPicker = {
+    createSelectPicker: function(picker) {
+        var divElement = document.createElement('div');
+        selectpicker.createSelectpickerButton(picker, divElement);
+        selectpicker.displayedValue(picker, divElement);
+        divElement.innerHTML += '<div class="dropdown-menu-select"><ul class="select-option-list"></ul></div>';
+        selectpicker.selectpickerEvent(divElement);
+        buildSelectPicker.createOptionsSelectpicker(picker, divElement);
+        divElement.appendChild(picker);
+
+        selectpicker.setSelectOptionEvent(divElement);
+    },
+
+    createOptionsSelectpicker: function(picker, divElement) {
+        picker.querySelectorAll('option').forEach(function (option) {
+            divElement.querySelector('div.dropdown-menu-select > ul.select-option-list').innerHTML += '<li value="' + option.value + '">' + option.innerHTML + '</li>'
         });
     }
 }
